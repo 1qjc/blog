@@ -24,12 +24,14 @@ async function HomePage() {
             </p>
           </div>
         }>
-        (preview)
+        <p className="text-center font-bold fixed left-3 top-3">
+          (preview mode)
+        </p>
         <PreviewBlogList query={query} />
       </PreviewSuspense>
     );
   }
-  const posts = await client.fetch(query);
+  const posts: Post[] = await client.fetch(query);
   return <BlogList posts={posts} />;
 }
 
