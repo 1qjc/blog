@@ -26,7 +26,6 @@ export async function generateStaticParams() {
 export const revalidate = 60;
 
 async function page({ params: { slug } }: Props) {
-  console.log(process.env);
   const query = groq`
     *[_type=='post' && slug.current==$slug][0]{
       ...,
