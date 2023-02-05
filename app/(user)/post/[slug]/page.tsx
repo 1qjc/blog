@@ -23,6 +23,8 @@ export async function generateStaticParams() {
   return slugRoutes.map((slug) => ({ slug }));
 }
 
+export const revalidate = 60;
+
 async function page({ params: { slug } }: Props) {
   const query = groq`
     *[_type=='post' && slug.current==$slug][0]{
@@ -86,7 +88,7 @@ async function page({ params: { slug } }: Props) {
           </section>
         </div>
       </section>
-      <PortableText value={post.body} components={RichTextComponents} />
+      <PortableText value={post.body!} components={RichTextComponents} />
     </article>
   );
 }
