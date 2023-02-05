@@ -1,5 +1,4 @@
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
-import { log } from "console";
 import Image from "next/image";
 import urlFor from "../lib/urlFor";
 import { ClientSideRoute } from "./ClientSideRoute";
