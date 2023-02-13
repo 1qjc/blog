@@ -22,7 +22,7 @@ export async function generateStaticParams() {
   return slugRoutes.map((slug) => ({ slug }));
 }
 
-export const revalidate = 60;
+export const revalidate = 30;
 
 async function page({ params: { slug } }: Props) {
   const query = groq`

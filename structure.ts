@@ -15,7 +15,7 @@ export const getDefaultDocumentNode: DefaultDocumentNodeResolver = (
           // OR a string
           url: `${
             process.env.NEXT_PUBLIC_VERCEL_URL
-              ? "blog-1qjc.vercel.app"
+              ? "https://blog-1qjc.vercel.app"
               : "http://localhost:3000"
           }/api/preview`,
           // Optional: Set the default size
