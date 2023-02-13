@@ -4,7 +4,7 @@ export default async function preview(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  res.setPreviewData({ a: 1 });
+  res.setPreviewData({});
   res.writeHead(307, { Location: "/" });
   res.end();
 }
