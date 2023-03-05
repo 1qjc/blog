@@ -29,6 +29,10 @@ fixes}} {{#if href}}[`#{{id}}`]({{href}}){{/if}}{{/each}}
 {{/each}}
 {{/if}}
 
+{{#commit-list commits heading='### All'}}
+  - {{subject}} [`{{shorthash}}`]({{href}})
+{{/commit-list}}
+
 {{#commit-list commits heading='### Documentation' message='docs:' exclude='Breaking change: '}}
   - {{subject}} [`{{shorthash}}`]({{href}})
 {{/commit-list}}
