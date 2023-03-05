@@ -29,11 +29,19 @@ fixes}} {{#if href}}[`#{{id}}`]({{href}}){{/if}}{{/each}}
 {{/each}}
 {{/if}}
 
-{{#commit-list commits heading='### Doc Features' message='docs:' exclude='Breaking change: '}}
+{{#commit-list commits heading='### Documentation' message='docs:' exclude='Breaking change: '}}
   - {{subject}} [`{{shorthash}}`]({{href}})
 {{/commit-list}}
 
-{{#commit-list commits heading='### New Features' message='fix:'}}
+{{#commit-list commits heading='### Bug Fixed' message='fix:'}}
+  - {{subject}} [`{{shorthash}}`]({{href}})
+{{/commit-list}}
+
+{{#commit-list commits heading='### New Features' message='feat:'}}
+  - {{subject}} [`{{shorthash}}`]({{href}})
+{{/commit-list}}
+
+{{#commit-list commits heading='### Test Related' message='test:'}}
   - {{subject}} [`{{shorthash}}`]({{href}})
 {{/commit-list}}
 
