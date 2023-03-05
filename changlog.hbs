@@ -2,9 +2,9 @@
 
 {{#each releases}}
 {{#if href}}
-## [{{title}}]({{href}}){{#if tag}} - {{isoDate}}{{/if}}
+## [{{title}}]({{href}}) - {{isoDate}}
 {{else}}
-## {{title}}{{#if tag}} - {{isoDate}}{{/if}}
+## {{title}} - {{niceDate}}
 {{/if}}
 
 {{#if summary}}
@@ -29,7 +29,8 @@ fixes}} {{#if href}}[`#{{id}}`]({{href}}){{/if}}{{/each}}
 {{/each}}
 {{/if}}
 
-{{#commit-list commits heading='### All'}}
+{{#commit-list commits heading='### All' 
+exclude='docs: |feat: |fixed: ' exclude='feat: ' exclude='feat: '}}
   - {{subject}} [`{{shorthash}}`]({{href}})
 {{/commit-list}}
 
